@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BasicConsoleIO
 {
@@ -13,6 +9,7 @@ namespace BasicConsoleIO
             Console.WriteLine("***** Basic Console I/O *****");
             GetUserData();
             FormatNumericalData();
+            DisplayMessage();
             Console.ReadLine();
         }
 
@@ -49,6 +46,14 @@ namespace BasicConsoleIO
             Console.WriteLine("e format: {0:e}", 9999);
             Console.WriteLine("X format: {0:X}", 9999);
             Console.WriteLine("x format: {0:x}", 9999);
+        }
+
+        static void DisplayMessage()
+        {
+            //Using string.Format() to format a string literal.
+            string userMessage = string.Format("100000 in hex is {0:x}", 100000);
+
+            System.Windows.MessageBox.Show(userMessage);
         }
     }
 }
